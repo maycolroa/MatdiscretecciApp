@@ -2,7 +2,7 @@ import React from 'react';
 
 function MatrixResults({ results }) {
   return (
-    <div>
+    <div className="results">
       <h2>Resultados</h2>
       <ul>
         {results.map((result, index) => (

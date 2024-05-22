@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Network } from 'vis-network/standalone/esm/vis-network';
+import { Network } from 'vis-network';
 
 function MatrixGraph({ matrix }) {
   const containerRef = useRef(null);

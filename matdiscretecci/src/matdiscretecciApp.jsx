@@ -3,6 +3,7 @@ import MatrixInput from './components/MatrixInput';
 import MatrixResults from './components/MatrixResults';
 import MatrixGraph from './components/MatrixGraph';
 import { isReflexive, isIrreflexive, isSymmetric } from './utils/relations';
+import './index.css';
 
 function MatdiscretecciApp() {
   const [matrix, setMatrix] = useState([]);
@@ -23,7 +24,9 @@ function MatdiscretecciApp() {
       <h1>Simulación de Relaciones Sobre Conjuntos y Grafos</h1>
       <MatrixInput onMatrixSubmit={handleMatrixSubmit} />
       <MatrixResults results={results} />
-      <MatrixGraph matrix={matrix} />
+      <div id="graph-container">
+        <MatrixGraph matrix={matrix} />
+      </div>
     </div>
   );
 }
