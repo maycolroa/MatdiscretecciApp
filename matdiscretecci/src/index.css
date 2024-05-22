@@ -8,7 +8,7 @@ body {
   padding: 20px;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
   color: #343a40;
   margin-bottom: 20px;
@@ -34,6 +34,18 @@ input[type="number"] {
   text-align: center;
 }
 
+/* Hide arrows in input type number */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield; /* Standard */
+}
+
 input[type="submit"] {
   background-color: #007bff;
   color: white;
@@ -41,22 +53,30 @@ input[type="submit"] {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+  margin-bottom: 10px; /* Reducido el margen inferior */
 }
 
 input[type="submit"]:hover {
   background-color: #0056b3;
 }
 
+/* Ajuste del margen superior del contenedor de la matriz */
+.matrix-container {
+  margin-top: 20px;
+}
+
 /* Matrix input styles */
 .matrix-grid {
   display: grid;
   gap: 5px;
+  max-width: 100%;
 }
 
 input[type="number"].matrix-cell {
   width: 40px;
   padding: 5px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* Result styles */
